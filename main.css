@@ -1,0 +1,291 @@
+@font-face {
+    font-family: Bold;
+    src: url(fonts/URWGeometric-Bold.otf);
+}
+
+@font-face {
+    font-family: Regular;
+    src: url(fonts/URWGeometric-Regular.otf);
+}
+
+* {
+    font-family: "Regular";
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%
+}
+
+.logo {
+    display: block;
+    width:60px;
+    fill: #1e1e1e;
+}
+
+.logo:hover {
+    filter: invert(41%) sepia(83%) saturate(1917%) hue-rotate(339deg) brightness(103%) contrast(104%);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    position: relative;
+    background: white;
+    border-bottom-right-radius: 25px;
+}
+
+.logo-container::after {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: -20px;
+    height: 50px;
+    width: 25px;
+    border-top-left-radius: 25px;
+    box-shadow: 0px -30px 0px 0px white;
+    right: -20px;
+}
+
+.filler {
+    display: flex;
+    width: 100%;
+    background: white;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px;
+}
+
+.header > .filler {
+    height: 70px;
+}
+
+.footer > .filler {
+    height: 35px;
+}
+
+.social-icon {
+    display: block;
+    height: 27px;
+    margin: 10px 15px;
+}
+
+.background {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.content {
+    color: white;
+    height: 100%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.motto-container {
+    text-align: center;
+    max-width: 640px;
+}
+
+.motto {
+    font-family: "Bold";
+    margin: 0;
+    font-size: 65px;
+}
+
+.quote {
+    margin: 20px 0 40px 0;
+    font-size: 42px;
+}
+
+.portrait {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    pointer-events: none;
+}
+
+.cv-button {
+    cursor: pointer;
+    font-family: "Bold";
+    background: white;
+    border-radius: 25px;
+    border: none;
+    color: #FF5733;
+    padding: 20px 30px 13px 30px;
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    align-items: flex-end;
+}
+
+.footer-navigation {
+    display: flex;
+    align-items: center;
+    padding: 10px 40px 35px 40px;
+    position: relative;
+    height: 120px;
+    background: white;
+    border-top-left-radius: 25px;
+}
+
+.footer-navigation::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: 35px;
+    height: 50px;
+    width: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0px 25px 0px 0px white;
+    left: -25px;
+}
+
+.footer-text {
+    text-decoration: none;
+    color: #404040;
+    width: max-content;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+.footer-text:hover {
+    color: #FF5733;
+}
+
+.about {
+    margin: 20px 0 40px 0;
+    font-size: 36px;
+}
+
+.contact {
+    background: white;
+    width: 640px;
+    height: calc(100% - 250px);
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 420px;
+    margin-left: 10px;
+    margin-top: 80px;
+    width: 100%;
+}
+
+.project {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    background: white;
+    width: calc(50% - 20px);
+    height: calc(50vh - 120px);
+    overflow: hidden;
+    border: solid 5px white;
+}
+
+.project-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: #1e1e1ecc;
+    transition: opacity 0.2s ease-in-out 0s;
+}
+
+.project-overlay:hover {
+    opacity: 1;
+}
+
+.project-link {
+    width: 100%;
+    height: 100%;
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.project-overlay-title {
+    font-size: 36px;
+    font-family: "Bold";
+}
+
+.project-wall {
+    width: 50%;
+    border-radius: 25px;
+    border: solid 5px white;
+    margin: 10px;
+}
+
+.project-text {
+    padding: 10px;
+    width: 50%;
+    margin: 10px;
+}
+
+.project-title {
+    font-size: 36px;
+    text-align: center;
+    text-shadow: 2px 2px #ff0000;
+}
+
+.project-desc {
+    font-size: 24px;
+    color: white;
+}
+
+.telastory {
+    background-image: url("images/telastory.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+.vampir {
+    background-image: url("images/vampir.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+.vestel {
+    background-image: url("images/vestel.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+.boomerang {
+    background-image: url("images/boomerang.png");
+    background-position: center center;
+    background-size: cover;
+}
